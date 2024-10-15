@@ -1,52 +1,105 @@
-import React from 'react'
+import React from "react";
 
 function Footer() {
   return (
-    <footer class="bg-primary text-white p-8">
-  <div class="max-w-screen-lg mx-auto flex flex-col gap-8 text-left md:text-left">
-    <div>
-      <h2 class="font-bold text-lg mb-4">Get In Touch</h2>
-      <p class="text-sm mb-4">the quick fox jumps over the lazy dog</p>
-      <div class="flex md:justify-start space-x-4">
-        <a href="#" aria-label="Facebook" class="hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="Twitter" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+    <footer>
+      <div className="flex flex-col gap-8 justify-between md:flex-row ">
+        <div className="flex flex-col gap-4">
+          <h2 className="font-bold text-3xl  text-primary-color">Get In Touch</h2>
+          <p className="text-sm ">the quick fox jumps over the lazy dog</p>
+          <div className="flex md:justify-start gap-5 text-2xl">
+            <a href="#" aria-label="Facebook" className="hover:text-primary-color">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="Instagram" className="hover:text-primary-color">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="Twitter" className="hover:text-primary-color">
+              <i className="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h2 className="font-bold text-3xl mb-4 text-primary-color">Company Info</h2>
+          <ul className="space-y-2">
+            <li>
+              <a href="#" className="text-secondary-color hover:text-primary-color">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-secondary-color hover:text-primary-color">
+                Carrier
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-secondary-color hover:text-primary-color">
+                We are hiring
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-secondary-color hover:text-primary-color">
+                Blog
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="font-bold text-3xl mb-4 text-primary-color">Features</h2>
+          <ul className="space-y-2">
+            <li>
+              <a href="#" className=" text-secondary-color hover:text-primary-color">
+                Business Marketing
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-secondary-color hover:text-primary-color">
+                User Analytic
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-secondary-color hover:text-primary-color">
+                Live Chat
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-secondary-color hover:text-primary-color">
+                Unlimited Support
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="font-bold text-3xl mb-4 text-primary-color">Resources</h2>
+          <ul className="space-y-2">
+            <li>
+              <a href="#" className="text-secondary-color hover:text-primary-color">
+                IOS & Android
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-secondary-color hover:text-primary-color">
+                Watch a Demo
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-secondary-color hover:text-primary-color">
+                Customers
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-secondary-color hover:text-primary-color">
+                API
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div>
-      <h2 class="font-bold text-lg mb-4">Company Info</h2>
-      <ul class="space-y-2">
-        <li><a href="#" class="hover:text-gray-300">About Us</a></li>
-        <li><a href="#" class="hover:text-gray-300">Carrier</a></li>
-        <li><a href="#" class="hover:text-gray-300">We are hiring</a></li>
-        <li><a href="#" class="hover:text-gray-300">Blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2 class="font-bold text-lg mb-4">Features</h2>
-      <ul class="space-y-2">
-        <li><a href="#" class="hover:text-gray-300">Business Marketing</a></li>
-        <li><a href="#" class="hover:text-gray-300">User Analytic</a></li>
-        <li><a href="#" class="hover:text-gray-300">Live Chat</a></li>
-        <li><a href="#" class="hover:text-gray-300">Unlimited Support</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2 class="font-bold text-lg mb-4">Resources</h2>
-      <ul class="space-y-2">
-        <li><a href="#" class="hover:text-gray-300">IOS & Android</a></li>
-        <li><a href="#" class="hover:text-gray-300">Watch a Demo</a></li>
-        <li><a href="#" class="hover:text-gray-300">Customers</a></li>
-        <li><a href="#" class="hover:text-gray-300">API</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="mt-8 text-center text-sm bg-gray-200 py-4 text-gray-700">
-    Made With Love By Figmaland All Right Reserved
-  </div>
-</footer>
-
-  )
+      <div className="mt-8 text-center text-sm bg-gray-200 py-4 text-gray-700">
+        Made With Love By Figmaland All Right Reserved
+      </div>
+    </footer>
+  );
 }
 
-export default Footer 
+export default Footer;
