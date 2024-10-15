@@ -6,11 +6,10 @@ export default {
       fontFamily: {
         inter: ["Inter", "sans-serif"], 
       },
-    },
-    colors: {
-      'primary-color':' #FCA311',
-      'secondary-color': '#14213D', 
-    
+      colors: {
+        'primary-color':' #FCA311',
+        'secondary-color': '#14213D', 
+      },
     },
     screens: {
       'sm': '640px',
