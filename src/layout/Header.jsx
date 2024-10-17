@@ -6,11 +6,11 @@ function Header() {
   const menuItems = ["Home", "Product", "Pricing", "Contact"];
 
   return (
-    <div>
+   
       <header className="flex flex-col justify-between p-4 ">
         <div className="w-full flex justify-between items-center">
-          <div className="font-bold text-lg text-primary-color">
-          🌙 LUNA COFFEE ☕
+          <div className="font-bold text-lg text-secondary-color">
+          🌙 BANDAGE ☕
           </div>
           <nav className="hidden md:flex gap-8 md:flex-row flex-col items-start ">
             {menuItems.map((item) => (
@@ -46,8 +46,6 @@ function Header() {
           ))}
         </nav>
       </header>
-      <Slider />
-    </div>
   );
 }
 

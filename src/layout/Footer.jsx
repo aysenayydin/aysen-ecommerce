@@ -2,9 +2,10 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer>
-      <div className="flex flex-col gap-8 justify-between md:flex-row ">
-        <div className="flex flex-col gap-4">
+    <footer className="bg-white py-8 ">
+      <div className="flex flex-col items-center">
+      <div className="flex flex-col gap-8 items-start text-left md:flex-row  md:gap-20  ">
+        <div className="flex flex-col gap-4 items-start">
           <h2 className="font-bold text-3xl  text-primary-color">Get In Touch</h2>
           <p className="text-sm ">the quick fox jumps over the lazy dog</p>
           <div className="flex md:justify-start gap-5 text-2xl">
@@ -19,7 +20,7 @@ function Footer() {
             </a>
           </div>
         </div>
-        <div>
+        <div className="flex flex-col items-start ">
           <h2 className="font-bold text-3xl mb-4 text-primary-color">Company Info</h2>
           <ul className="space-y-2">
             <li>
@@ -44,7 +45,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="flex flex-col items-start " >
           <h2 className="font-bold text-3xl mb-4 text-primary-color">Features</h2>
           <ul className="space-y-2">
             <li>
@@ -69,7 +70,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="flex flex-col items-start ">
           <h2 className="font-bold text-3xl mb-4 text-primary-color">Resources</h2>
           <ul className="space-y-2">
             <li>
@@ -94,6 +95,7 @@ function Footer() {
             </li>
           </ul>
         </div>
+      </div>
       </div>
       <div className="mt-8 text-center text-sm bg-gray-200 py-4 text-gray-700">
         Made With Love By Figmaland All Right Reserved

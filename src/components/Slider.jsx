@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Button } from "@/components/ui/button"
+
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
@@ -28,11 +30,13 @@ function Slider() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img className="relative " src="coffee1.jpg" alt="" />
-          <div className="absolute">
-            <h1 className="text-4xl font-bold text-white">COFFEE DELIVERY</h1>
-            <h2 className="text-white text-lg">Freshly brewed, delivered straight to your door.</h2>
-            <button>Button</button>
+          <img className="relative " src="home1.jpg" alt="" />
+          <div className="absolute flex flex-col gap-4 items-center">
+            <h1 className="text-5xl font-bold text-white">GROCERIES DELIVERY</h1>
+            <h2 className="text-white text-lg">We know how large objects will act, but things on a 
+            small scale just do not act that way.</h2>
+            <Button variant="secondary" className=
+            "bg-primary-color text-white max-w-min">Start Now</Button>
           </div>
         </SwiperSlide>
         <SwiperSlide>
