@@ -2,7 +2,7 @@ import React from "react";
 
 function Brands() {
   return (
-    <div className="flex flex-col items-center gap-14 md:flex-row md:gap-20 md:justify-center py-28">
+    <div className="flex flex-col items-center gap-14 md:flex-row md:gap-20 md:justify-center">
       <img
         src="brandcards/fa-brands_hooli.png"
         alt="Hooli"
@@ -24,11 +24,7 @@ function Brands() {
         className="w-24 h-auto"
       />
       <img src="brandcards/muck.png" alt="muck" className="w-24 h-auto" />
-      <img
-        src="brandcards/stripe.png"
-        alt="stripe"
-        className="w-24 h-auto"
-      />
+      <img src="brandcards/stripe.png" alt="stripe" className="w-24 h-auto" />
     </div>
   );
 }

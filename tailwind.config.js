@@ -9,8 +9,9 @@ export default {
       },
       colors: {
         "primary-color": "#23A6F0",
-		"secondary-color": "  #252B42",
+        "secondary-color": "  #252B42",
         "second-text-color": "#737373",
+        backgroundGrey: "#FAFAFA",
 
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
