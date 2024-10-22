@@ -7,6 +7,8 @@ import Footer from "./components/layout/Footer";
 import HomePage from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import FruitsPage from "./pages/FruitsPage";
+import VegetablesPage from "./pages/VegetablesPage";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/shop" element={<ShopPage />} />
+            <Route path="/shop/fruits" element={<FruitsPage />} />
+            <Route path="/shop/vegetables" element={<VegetablesPage />} />
           </Routes>
         </div>
         <Footer />
