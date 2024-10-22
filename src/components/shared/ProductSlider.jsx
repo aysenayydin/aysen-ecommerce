@@ -12,7 +12,7 @@ function ProductSlider({ bannerPosition = "left", banner }) {
 
   return (
     <div
-      className={`flex ${
+      className={`flex ${ 
         bannerPosition === "left"
           ? "flex-col md:flex-row"
           : " flex-col md:flex-row-reverse"
@@ -29,7 +29,7 @@ function ProductSlider({ bannerPosition = "left", banner }) {
         <div className="flex  flex-col md:flex-row border-b border-grey justify-between pb-2">
           <h2 className="text-lg font-bold mb-4">BESTSELLER PRODUCTS</h2>
           <div className="flex flex-col md:flex-row justify-center gap-4 mb-4">
-            {["Men", "Women", "Accessories"].map((category) => (
+            {["Vegetable", "Health Food", "Meats"].map((category) => (
               <Link to={`/${category.toLowerCase()}`} key={category}>
                 <Button
                   onClick={() => setSelectedCategory(category.toLowerCase())}

@@ -18,9 +18,9 @@ function Header() {
             <NavLink
               key={item}
               to={`/${item.toLowerCase()}`}
-              className="text-lg font-medium text-secondary-color"
-              activeClassName="text-primary-color"
-              exact
+              className={({ isActive }) =>
+                `text-lg font-medium ${isActive ? 'text-primary-color' : 'text-secondary-color'}`
+              }
             >
               {item}
             </NavLink>
@@ -48,9 +48,9 @@ function Header() {
           <NavLink
             key={item}
             to={`/${item.toLowerCase()}`}
-            className="text-lg font-medium text-secondary-color"
-            activeClassName="text-primary-color"
-            exact
+            className={({ isActive }) =>
+              `text-lg font-medium ${isActive ? 'text-primary-color' : 'text-secondary-color'}`
+            }
           >
             {item}
           </NavLink>
