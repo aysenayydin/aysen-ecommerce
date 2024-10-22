@@ -15,7 +15,7 @@ function ProductSlider({ bannerPosition = "left", banner }) {
       className={`flex ${
         bannerPosition === "left"
           ? "flex-col md:flex-row"
-          : "md:flex-row-reverse"
+          : " flex-col md:flex-row-reverse"
       }`}
     >
       <div className="relative flex shrink-0">
@@ -26,9 +26,9 @@ function ProductSlider({ bannerPosition = "left", banner }) {
         </div>
       </div>
       <div className="p-4 text-center md:w-[800px]">
-        <div className="flex border-b border-grey justify-between pb-2">
+        <div className="flex  flex-col md:flex-row border-b border-grey justify-between pb-2">
           <h2 className="text-lg font-bold mb-4">BESTSELLER PRODUCTS</h2>
-          <div className="flex justify-center gap-4 mb-4">
+          <div className="flex flex-col md:flex-row justify-center gap-4 mb-4">
             {["Men", "Women", "Accessories"].map((category) => (
               <Link to={`/${category.toLowerCase()}`} key={category}>
                 <Button
