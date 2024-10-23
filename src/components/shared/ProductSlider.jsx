@@ -9,13 +9,78 @@ function ProductSlider({ bannerPosition = "left", banner }) {
   const [selectedCategory, setSelectedCategory] = useState("men");
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-
+  const products = [
+    {
+      id: 1,
+      img: "/smallcards/card1.png",
+      topText: "Graphic Design",
+      middleText: "English Department",
+      price: "$16.48",
+      discountedPrice: "$6.48",
+    },
+    {
+      id: 2,
+      img: "/smallcards/card2.jpg",
+      topText: "Graphic Design",
+      middleText: "English Department",
+      price: "$16.48",
+      discountedPrice: "$6.48",
+    },
+    {
+      id: 3,
+      img: "/smallcards/card3.jpg",
+      topText: "Graphic Design",
+      middleText: "English Department",
+      price: "$16.48",
+      discountedPrice: "$6.48",
+    },
+    {
+      id: 4,
+      img: "/smallcards/card4.png",
+      topText: "Graphic Design",
+      middleText: "English Department",
+      price: "$16.48",
+      discountedPrice: "$6.48",
+    },
+    {
+      id: 5,
+      img: "/smallcards/card5.jpg",
+      topText: "Graphic Design",
+      middleText: "English Department",
+      price: "$16.48",
+      discountedPrice: "$6.48",
+    },
+    {
+      id: 6,
+      img: "/smallcards/card6.jpg",
+      topText: "Graphic Design",
+      middleText: "English Department",
+      price: "$16.48",
+      discountedPrice: "$6.48",
+    },
+    {
+      id: 7,
+      img: "/smallcards/card7.jpg",
+      topText: "Graphic Design",
+      middleText: "English Department",
+      price: "$16.48",
+      discountedPrice: "$6.48",
+    },
+    {
+      id: 8,
+      img: "/smallcards/card8.jpg",
+      topText: "Graphic Design",
+      middleText: "English Department",
+      price: "$16.48",
+      discountedPrice: "$6.48",
+    },
+  ];
   return (
     <div
-      className={`flex ${ 
+      className={`flex justify-between ${
         bannerPosition === "left"
           ? "flex-col md:flex-row"
-          : " flex-col md:flex-row-reverse"
+          : "flex-col md:flex-row-reverse"
       }`}
     >
       <div className="relative flex shrink-0">
@@ -25,8 +90,8 @@ function ProductSlider({ bannerPosition = "left", banner }) {
           <p className="text-black">5 Items</p>
         </div>
       </div>
-      <div className="p-4 text-center md:w-[800px]">
-        <div className="flex  flex-col md:flex-row border-b border-grey justify-between pb-2">
+      <div className="p-4 text-center md:w-[700px]">
+        <div className="flex flex-col md:flex-row border-b border-grey justify-between pb-2">
           <h2 className="text-lg font-bold mb-4">BESTSELLER PRODUCTS</h2>
           <div className="flex flex-col md:flex-row justify-center gap-4 mb-4">
             {["Vegetable", "Health Food", "Meats"].map((category) => (
@@ -86,77 +151,17 @@ function ProductSlider({ bannerPosition = "left", banner }) {
           className="w-full h-full"
         >
           <SwiperSlide className="text-center text-lg bg-white flex justify-center items-center">
-            <div className="flex flex-wrap justify-center gap-6 md:justify-start lg:justify-between mb-8 ">
-              <ProductCard
-                img={"smallcards/card1.png"}
-                topText={"Graphic Design"}
-                middleText={"English Department"}
-                bottomText={
-                  <>
-                    <span className="text-gray-500">$16.48</span>
-                    <span className="text-green-600 font-bold">$6.48</span>
-                  </>
-                }
-              />
-              <ProductCard
-                img={"smallcards/card2.jpg"}
-                topText={"Graphic Design"}
-                middleText={"English Department"}
-                bottomText={
-                  <>
-                    <span className="text-gray-500">$16.48</span>
-                    <span className="text-green-600 font-bold">$6.48</span>
-                  </>
-                }
-              />
-              <ProductCard
-                img={"smallcards/card3.jpg"}
-                topText={"Graphic Design"}
-                middleText={"English Department"}
-                bottomText={
-                  <>
-                    <span className="text-gray-500">$16.48</span>
-                    <span className="text-green-600 font-bold">$6.48</span>
-                  </>
-                }
-              />
+            <div className="flex flex-wrap justify-center md:justify-start lg:justify-between mb-8 ">
+              {products.slice(0, 6).map((p) => (
+                <ProductCard product={p} key={p.id} />
+              ))}
             </div>
           </SwiperSlide>
           <SwiperSlide className="text-center text-lg bg-white flex justify-center items-center">
-            <div className="flex flex-wrap justify-center gap-6 md:justify-start lg:justify-between mb-8 ">
-              <ProductCard
-                img={"smallcards/card1.png"}
-                topText={"Graphic Design"}
-                middleText={"English Department"}
-                bottomText={
-                  <>
-                    <span className="text-gray-500">$16.48</span>
-                    <span className="text-green-600 font-bold">$6.48</span>
-                  </>
-                }
-              />
-              <ProductCard
-                img={"smallcards/card2.jpg"}
-                topText={"Graphic Design"}
-                middleText={"English Department"}
-                bottomText={
-                  <>
-                    <span className="text-gray-500">$16.48</span>
-                    <span className="text-green-600 font-bold">$6.48</span>
-                  </>
-                }
-              />
-              <ProductCard
-                img={"smallcards/card3.jpg"}
-                topText={"Graphic Design"}
-                middleText={"English Department"}
-                bottomText={
-                  <>
-                    <span className="text-gray-500">$16.48</span>
-                    <span className="text-green-600 font-bold">$6.48</span>
-                  </>
-                }
-              />
+            <div className="flex flex-wrap justify-center md:justify-start lg:justify-between mb-8 ">
+              {products.slice(0, 6).map((p) => (
+                <ProductCard product={p} key={p.id} />
+              ))}
             </div>
           </SwiperSlide>
         </Swiper>

@@ -9,6 +9,7 @@ import ShopPage from "./pages/ShopPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FruitsPage from "./pages/FruitsPage";
 import VegetablesPage from "./pages/VegetablesPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/shop/fruits" element={<FruitsPage />} />
             <Route path="/shop/vegetables" element={<VegetablesPage />} />
+            <Route path="/product/:productId" element={<ProductDetailPage />}  />
           </Routes>
         </div>
         <Footer />

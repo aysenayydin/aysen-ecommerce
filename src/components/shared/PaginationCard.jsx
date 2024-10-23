@@ -4,59 +4,66 @@ import React, { useState } from "react";
 import ProductCard from "./ProductCard";
 
 function PaginationCard() {
-
   const products = [
     {
-      img: "smallcards/card1.png",
+      id: 1,
+      img: "/smallcards/card1.png",
+      topText: "fsGraphic Design",
+      middleText: "English Department",
+      price: "$16.48",
+      discountedPrice: "$6.48",
+    },
+    {
+      id: 2,
+      img: "/smallcards/card2.jpg",
       topText: "Graphic Design",
       middleText: "English Department",
       price: "$16.48",
       discountedPrice: "$6.48",
     },
     {
-      img: "smallcards/card2.jpg",
+      id: 3,
+      img: "/smallcards/card3.jpg",
       topText: "Graphic Design",
       middleText: "English Department",
       price: "$16.48",
       discountedPrice: "$6.48",
     },
     {
-      img: "smallcards/card3.jpg",
+      id: 4,
+      img: "/smallcards/card4.png",
       topText: "Graphic Design",
       middleText: "English Department",
       price: "$16.48",
       discountedPrice: "$6.48",
     },
     {
-      img: "smallcards/card4.png",
+      id: 5,
+      img: "/smallcards/card5.jpg",
       topText: "Graphic Design",
       middleText: "English Department",
       price: "$16.48",
       discountedPrice: "$6.48",
     },
     {
-      img: "smallcards/card5.jpg",
+      id: 6,
+      img: "/smallcards/card6.jpg",
       topText: "Graphic Design",
       middleText: "English Department",
       price: "$16.48",
       discountedPrice: "$6.48",
     },
     {
-      img: "smallcards/card6.jpg",
+      id: 7,
+      img: "/smallcards/card7.jpg",
       topText: "Graphic Design",
       middleText: "English Department",
       price: "$16.48",
       discountedPrice: "$6.48",
     },
     {
-      img: "smallcards/card7.jpg",
-      topText: "Graphic Design",
-      middleText: "English Department",
-      price: "$16.48",
-      discountedPrice: "$6.48",
-    },
-    {
-      img: "smallcards/card8.jpg",
+      id: 8,
+      img: "/smallcards/card8.jpg",
       topText: "Graphic Design",
       middleText: "English Department",
       price: "$16.48",
@@ -80,23 +87,9 @@ function PaginationCard() {
 
   return (
     <div>
-
       <div className="flex flex-wrap justify-center gap-6 md:justify-start lg:justify-between mb-8">
-        {currentItems.map((product, index) => (
-          <ProductCard
-            key={index}
-            img={product.img}
-            topText={product.topText}
-            middleText={product.middleText}
-            bottomText={
-              <>
-                <span className="text-gray-500">{product.price}</span>{" "}
-                <span className="text-green-600 font-bold">
-                  {product.discountedPrice}
-                </span>
-              </>
-            }
-          />
+        {currentItems.map((product) => (
+          <ProductCard product={product} key={product.id} />
         ))}
       </div>
 
