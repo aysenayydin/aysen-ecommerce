@@ -1,19 +1,36 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
+function ProductCard({ product }) {
+  console.log("p", product);
 
-function ProductCard({ img, topText, middleText, bottomText }) {
- return (
-    <div className="bg-white w-[333px] h-[232px] relative flex  items-center justify-between p-4">
+  const navigate = useNavigate();
+  if (!product) {
+    return null; // Or render a placeholder/loading state
+  }
+  const handleCardClick = () => {
+    navigate(`/product/${product.id}`, { state: { product } });
+  };
+  return (
+    <div
+      className="bg-white w-[333px] h-[232px] relative flex  items-center justify-between p-4 cursor-pointer"
+      onClick={handleCardClick}
+    >
       <div className="flex flex-col gap-2 text-secondary-color">
-        <p>{topText}</p>
-        <p className="font-bold text-lg ">{middleText}</p>
-        <p className="text-sm">{bottomText}</p>
+        <p>{product.topText}</p>
+        <p className="font-bold text-lg ">{product.middleText}</p>
+        <p className="text-sm">
+          <>
+            <span className="text-gray-500">{product.price}</span>
+            <span className="text-green-600 font-bold">
+              {product.discountedPrice}
+            </span>
+          </>
+        </p>
       </div>
-      <img src={img} alt="" className="w-48 h-48 object-contain" />
+      <img src={product.img} alt="" className="w-48 h-48 object-contain" />
     </div>
   );
 }
 
 export default ProductCard;
-
-

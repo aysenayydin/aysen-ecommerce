@@ -6,7 +6,7 @@ function ShopPopular() {
       <img
         src="blockcard/mostpop.jpg"
         alt="Popular Item"
-        className="h-[528px] "
+        className="h-[528px] object-contain"
       />
 
       <div className="mt-4 pl-4 text-center">
