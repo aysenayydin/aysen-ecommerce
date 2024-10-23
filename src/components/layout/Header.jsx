@@ -4,7 +4,7 @@ import { FaUser, FaSearch, FaShoppingCart, FaBars } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 
 function Header() {
-  const menuItems = ["Home", "Product", "Shop", "Pricing", "Contact"];
+  const menuItems = ["Home", "Product", "Shop", "Team", "Contact"];
 
   return (
     <header className="flex flex-col justify-between p-4">
