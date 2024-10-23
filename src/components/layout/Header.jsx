@@ -1,6 +1,6 @@
 import React from "react";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import { NavLink } from "react-router-dom";
+import { FaUser, FaSearch, FaShoppingCart, FaBars } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 
 function Header() {
@@ -29,16 +29,16 @@ function Header() {
         {/* Kullanıcı butonları */}
         <nav className="flex items-center space-x-4">
           <Button variant="ghost" className="text-secondary-color">
-            <i className="fas fa-user"></i>
+            <FaUser />
           </Button>
           <Button variant="ghost" className="text-secondary-color">
-            <i className="fas fa-search"></i>
+            <FaSearch />
           </Button>
           <Button variant="ghost" className="text-secondary-color">
-            <i className="fas fa-shopping-cart"></i>
+            <FaShoppingCart />
           </Button>
           <Button variant="ghost" className="text-secondary-color">
-            <i className="fas fa-bars"></i>
+            <FaBars />
           </Button>
         </nav>
       </div>

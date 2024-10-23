@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FruitsPage from "./pages/FruitsPage";
 import VegetablesPage from "./pages/VegetablesPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/shop/fruits" element={<FruitsPage />} />
             <Route path="/shop/vegetables" element={<VegetablesPage />} />
-            <Route path="/product/:productId" element={<ProductDetailPage />}  />
+            <Route path="/product/:productId" element={<ProductDetailPage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </div>
         <Footer />
