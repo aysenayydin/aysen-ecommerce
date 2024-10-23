@@ -12,10 +12,18 @@ const ContactSection = () => {
         CONTACT OUR COMPANY
       </button>
       <div className="flex justify-center gap-6 text-2xl text-gray-600">
-        <FaTwitter className="hover:text-blue-500" />
-        <FaFacebook className="hover:text-blue-500" />
-        <FaInstagram className="hover:text-blue-500" />
-        <FaLinkedin className="hover:text-blue-500" />
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <FaTwitter className="hover:text-blue-500" />
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <FaFacebook className="hover:text-blue-500" />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <FaInstagram className="hover:text-blue-500" />
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin className="hover:text-blue-500" />
+        </a>
       </div>
     </div>
   );
