@@ -11,6 +11,7 @@ import FruitsPage from "./pages/FruitsPage";
 import VegetablesPage from "./pages/VegetablesPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import ContactPage from "./pages/ContactPage";
+import TeamPage from "./pages/TeamPage";
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
             <Route path="/shop/vegetables" element={<VegetablesPage />} />
             <Route path="/product/:productId" element={<ProductDetailPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/team" element={<TeamPage />} />
+           
           </Routes>
         </div>
         <Footer />
