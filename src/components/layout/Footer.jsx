@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -40,12 +41,12 @@ function Footer() {
             </h2>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/about"
                   className="text-secondary-color hover:text-primary-color"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
                 <a

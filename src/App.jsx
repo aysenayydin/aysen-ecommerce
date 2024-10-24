@@ -12,6 +12,7 @@ import VegetablesPage from "./pages/VegetablesPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import ContactPage from "./pages/ContactPage";
 import TeamPage from "./pages/TeamPage";
+import AboutUsPage from "./pages/AboutUsPage";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
             <Route path="/product/:productId" element={<ProductDetailPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/team" element={<TeamPage />} />
-           
+            <Route path="/about" element={<AboutUsPage />} />
           </Routes>
         </div>
         <Footer />
