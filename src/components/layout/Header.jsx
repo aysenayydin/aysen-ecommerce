@@ -19,7 +19,9 @@ function Header() {
               key={item}
               to={`/${item.toLowerCase()}`}
               className={({ isActive }) =>
-                `text-lg font-medium ${isActive ? 'text-primary-color' : 'text-secondary-color'}`
+                `text-lg font-medium ${
+                  isActive ? "text-primary-color" : "text-secondary-color"
+                }`
               }
             >
               {item}
@@ -28,9 +30,19 @@ function Header() {
         </nav>
         {/* Kullanıcı butonları */}
         <nav className="flex items-center space-x-4">
-          <Button variant="ghost" className="text-secondary-color">
-            <FaUser />
-          </Button>
+          <NavLink
+            to={`/signup`}
+            className={({ isActive }) =>
+              `text-lg font-medium ${
+                isActive ? "text-primary-color" : "text-secondary-color"
+              }`
+            }
+          >
+            <Button variant="ghost" className="text-secondary-color">
+              <FaUser />
+            </Button>
+          </NavLink>
+
           <Button variant="ghost" className="text-secondary-color">
             <FaSearch />
           </Button>
@@ -49,7 +61,9 @@ function Header() {
             key={item}
             to={`/${item.toLowerCase()}`}
             className={({ isActive }) =>
-              `text-lg font-medium ${isActive ? 'text-primary-color' : 'text-secondary-color'}`
+              `text-lg font-medium ${
+                isActive ? "text-primary-color" : "text-secondary-color"
+              }`
             }
           >
             {item}
