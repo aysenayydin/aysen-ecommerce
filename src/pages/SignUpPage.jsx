@@ -1,3 +1,4 @@
+import InnerContainer from "@/components/shared/InnerContainer";
 import SignUp from "@/components/shared/SignUp";
 import { getRoles } from "@/lib/apiService";
 import React, { useEffect, useState } from "react";
@@ -29,9 +30,9 @@ function SignUpPage() {
   //     .catch((error) => console.error(error));
   // }, []);
   return (
-    <div>
+    <InnerContainer>
       <SignUp roles={roles} />
-    </div>
+    </InnerContainer>
   );
 }
 
