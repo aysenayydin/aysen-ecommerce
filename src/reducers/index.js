@@ -1,8 +1,12 @@
 import { combineReducers } from "redux";
-import testReducer from "./testReducer";
+import clientActions from "./clientActions";
+import productActions from "./productAction";
+import shoppingActions from "./shoppingActions";
 
 const rootReducer = combineReducers({
-  example: testReducer,
+  clientReducer: clientActions,
+  productReducer: productActions,
+  shoppingCartReducer: shoppingActions,
 });
 
 export default rootReducer;
