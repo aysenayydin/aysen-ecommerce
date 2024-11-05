@@ -58,6 +58,14 @@ export const fetchPosts = () => {
   return api.get("/posts");
 };
 
+export const postLogin = (data) => {
+  return api.post(`/login`, JSON.stringify(data), {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+};
+
 export default api;
 
 // Example usage in a component

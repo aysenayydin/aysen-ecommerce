@@ -2,8 +2,10 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaUser, FaSearch, FaShoppingCart, FaBars } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
+import { useSelector } from "react-redux";
 
 function Header() {
+  const user = useSelector((state) => state.clientReducer.user);
   const menuItems = ["Home", "Product", "Shop", "Team", "Contact"];
 
   return (
@@ -30,18 +32,31 @@ function Header() {
         </nav>
         {/* Kullanıcı butonları */}
         <nav className="flex items-center space-x-4">
-          <NavLink
-            to={`/signup`}
-            className={({ isActive }) =>
-              `text-lg font-medium ${
-                isActive ? "text-primary-color" : "text-secondary-color"
-              }`
-            }
-          >
-            <Button variant="ghost" className="text-secondary-color">
-              <FaUser />
-            </Button>
-          </NavLink>
+          {user && user.email ? (
+            <div className="flex items-center space-x-2">
+              <img
+                src={user.avatar}
+                alt="User Avatar"
+                className="w-8 h-8 rounded-full"
+              />
+              <span className="text-secondary-color font-medium">
+                {user.name || user.email}
+              </span>
+            </div>
+          ) : (
+            <NavLink
+              to={`/signup`}
+              className={({ isActive }) =>
+                `text-lg font-medium ${
+                  isActive ? "text-primary-color" : "text-secondary-color"
+                }`
+              }
+            >
+              <Button variant="ghost" className="text-secondary-color">
+                <FaUser />
+              </Button>
+            </NavLink>
+          )}
 
           <Button variant="ghost" className="text-secondary-color">
             <FaSearch />

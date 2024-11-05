@@ -1,5 +1,5 @@
 import InnerContainer from "@/components/shared/InnerContainer";
-import SignUp from "@/components/shared/SignUp";
+import SignUp from "@/components/shared/SignUpForm";
 import { getRoles } from "@/lib/apiService";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";

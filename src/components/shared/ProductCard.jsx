@@ -2,8 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function ProductCard({ product }) {
-  console.log("p", product);
-
   const navigate = useNavigate();
   if (!product) {
     return null; // Or render a placeholder/loading state
