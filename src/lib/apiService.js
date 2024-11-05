@@ -14,7 +14,7 @@ api.interceptors.request.use(
     // Add authentication token if available
     const token = localStorage.getItem("token");
     if (token) {
-      config.headers["Authorization"] = `Bearer ${token}`;
+      config.headers["Authorization"] = token;
     }
     return config;
   },
@@ -30,7 +30,9 @@ api.interceptors.response.use(
   (error) => {
     // Handle errors globally, if needed
     if (error.response && error.response.status === 401) {
-      // Optionally handle unauthorized requests (e.g., redirect to login)
+      // Optionally handle unauthorized requests, like removing token or redirecting to login
+      localStorage.removeItem("token");
+      delete api.defaults.headers["Authorization"];
     }
     return Promise.reject(error);
   }
@@ -56,6 +58,10 @@ export const deleteUser = (userId) => {
 // You can also add other API methods as needed
 export const fetchPosts = () => {
   return api.get("/posts");
+};
+
+export const verifyToken = () => {
+  return api.get("/verify"); // Verify endpoint for token authorization
 };
 
 export const postLogin = (data) => {

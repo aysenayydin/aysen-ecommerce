@@ -29,7 +29,8 @@ import { useDispatch } from "react-redux";
 
 const formSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
-  password: z.string(),
+  password: z.string().min(1, "Password is required"),
+  rememberMe: z.boolean().optional(),
 });
 
 function LoginForm() {
@@ -39,6 +40,11 @@ function LoginForm() {
 
   const form = useForm({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+      rememberMe: false,
+    },
   });
 
   const onSubmit = async (values) => {
@@ -103,6 +109,22 @@ function LoginForm() {
                 />
               </FormControl>
               <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        {/* Remember Me */}
+        <FormField
+          control={form.control}
+          name="rememberMe"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <label className="flex items-center space-x-2">
+                  <input type="checkbox" {...field} className="form-checkbox" />
+                  <span>Remember Me</span>
+                </label>
+              </FormControl>
             </FormItem>
           )}
         />

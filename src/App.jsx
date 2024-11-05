@@ -15,8 +15,34 @@ import TeamPage from "./pages/TeamPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
+import { useDispatch } from "react-redux";
+import { setUser } from "./reducers/clientActions"; // Adjust path as needed
+import { verifyToken } from "./lib/apiService"; // Import verifyToken API function
+import { useEffect } from "react";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      verifyToken()
+        .then((response) => {
+          if (response.data) {
+            dispatch(setUser(response.data));
+
+            // Renew token in localStorage
+            localStorage.setItem("token", response.data.token);
+          }
+        })
+        .catch((error) => {
+          // If token is not authorized, remove token and header
+          console.error("Token verification failed:", error);
+          toast.error("Session expired. Please log in again.");
+          localStorage.removeItem("token");
+        });
+    }
+  }, [dispatch]);
+
   return (
     <>
       <Router>
